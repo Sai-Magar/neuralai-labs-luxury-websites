@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowUp } from "lucide-react";
+import logo from "@/assets/logo.jpg";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,19 +10,19 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-background border-t border-primary/10 relative">
+    <footer className="bg-background border-t border-silver/20 relative">
       <div className="container mx-auto px-4">
         {/* Main Footer */}
         <div className="py-16">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
             {/* Brand */}
             <div className="lg:col-span-2">
-              <a href="#" className="flex items-center gap-2 mb-6">
-                <div className="w-12 h-12 bg-gradient-gold rounded-lg flex items-center justify-center">
-                  <span className="font-display font-bold text-primary-foreground text-xl">N</span>
+              <a href="#" className="flex items-center gap-3 mb-6">
+                <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-gold/50 shadow-gold">
+                  <img src={logo} alt="NeuralAI Labs Logo" className="w-full h-full object-cover" />
                 </div>
                 <span className="font-display font-bold text-2xl text-foreground">
-                  Neural<span className="text-primary">AI</span> Labs
+                  Neural<span className="text-gradient-gold-silver">AI</span> Labs
                 </span>
               </a>
               <p className="text-muted-foreground max-w-md mb-6 leading-relaxed">
@@ -35,7 +36,7 @@ const Footer = () => {
                     <a
                       key={social}
                       href="#"
-                      className="w-10 h-10 rounded-lg border border-primary/20 flex items-center justify-center text-muted-foreground hover:border-primary hover:text-primary transition-all duration-300"
+                      className="w-10 h-10 rounded-lg border border-silver/30 flex items-center justify-center text-silver hover:border-gold hover:text-gold transition-all duration-300"
                     >
                       <span className="text-xs uppercase">{social[0]}</span>
                     </a>
@@ -94,7 +95,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="py-6 border-t border-primary/10">
+        <div className="py-6 border-t border-silver/20">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground text-center md:text-left">
               © {currentYear} NeuralAI Labs. All rights reserved. Crafted with 💎 in India.
