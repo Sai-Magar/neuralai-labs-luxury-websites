@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.jpg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,17 +20,17 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-primary/10"
+      className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-silver/20"
     >
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-gradient-gold rounded-lg flex items-center justify-center">
-              <span className="font-display font-bold text-primary-foreground text-lg">N</span>
+          <a href="#" className="flex items-center gap-3">
+            <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-gold/50 shadow-gold">
+              <img src={logo} alt="NeuralAI Labs Logo" className="w-full h-full object-cover" />
             </div>
             <span className="font-display font-bold text-xl text-foreground">
-              Neural<span className="text-primary">AI</span> Labs
+              Neural<span className="text-gradient-gold-silver">AI</span> Labs
             </span>
           </a>
 
@@ -68,7 +69,7 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="md:hidden mt-4 pb-4 border-t border-primary/10 pt-4"
+            className="md:hidden mt-4 pb-4 border-t border-silver/20 pt-4"
           >
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
